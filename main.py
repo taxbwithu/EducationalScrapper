@@ -8,7 +8,7 @@ if __name__ == '__main__':
     wrapper = Wrapper()
     sender = Sender()
 
-    rawData = extractor.getSite()
+    rawData = extractor.get_site()
     dataModel = wrapper.packData()
 
 
