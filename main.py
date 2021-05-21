@@ -9,7 +9,7 @@ if __name__ == '__main__':
     sender = Sender()
 
     rawData = extractor.get_site()
-    dataModel = wrapper.packData()
+    sender.sendData(rawData)
 
 
     print(rawData)
