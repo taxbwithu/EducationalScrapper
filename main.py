@@ -1,15 +1,15 @@
 from Extractor import *
-from Wrapper import *
-from Sender import *
+from MongoToCSV import MongoToCSV
+# from Sender import *
 
 if __name__ == '__main__':
 
     extractor = Extractor()
-    wrapper = Wrapper()
-    sender = Sender()
+    # sender = Sender()
+    csv_maker = MongoToCSV()
 
-    rawData = extractor.get_site()
-    sender.sendData(rawData)
+    # rawData = extractor.get_site()
+    # sender.sendData(rawData)
+    csv_maker.getCsv()
 
-
-    print(rawData)
+    # print(rawData)
