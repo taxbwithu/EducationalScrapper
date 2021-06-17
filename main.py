@@ -1,6 +1,7 @@
 from Extractor import *
 from MongoToCSV import MongoToCSV
 from HadoopHelper import HadoopHelper
+from Sender import Sender
 import os
 from makecharts import makeCharts
 # from Sender import *
@@ -10,10 +11,10 @@ filename = 'movies.csv'
 if __name__ == '__main__':
 
     extractor = Extractor()
-    # sender = Sender()
+    sender = Sender()
     csv_maker = MongoToCSV()
-    # rawData = extractor.get_site()
-    # sender.sendData(rawData)
+    rawData = extractor.get_site()
+    sender.sendData(rawData)
     csv_maker.getCsv()
     print('utworzenie hh')
     hh = HadoopHelper()
